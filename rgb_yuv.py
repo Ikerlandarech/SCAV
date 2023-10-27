@@ -146,7 +146,6 @@ class DCTConverter:
 ##################
 ###    MAIN    ###
 ##################
-#global serpentine_data = #GLOBAL VARIABLE WHICH WE WILL USE IN MULTIPLE EXERCISES TO CHECK IF THE RUN-LENGTH ENCODER IS WORKING PROPERLY :)
 
 serpentine_data = []
 
@@ -220,23 +219,23 @@ if __name__ == "__main__":
 #python3 rgb_yuv.py --yuv_to_rgb Y U V (Replace with the values we want to convert)
 
 #EXERCISE 2: RESIZE INPUT IMAGE INTO OUTPUT IMAGE:
-#python3 rgb_yuv.py --resize_image INPUT_IMAGE.jpeg OUTPUT_IMAGE[NAME].jpeg WIDTH HEIGHT (Total of 4ARGS)  |  TESTS ARE RUNNING: python3 rgb_yuv.py --resize_image input_lena_512.jpeg ex_2_output_lena.jpeg 256 256 [ORIGINAL LENA INPUT IS 512X512]
+#python3 rgb_yuv.py --resize_image INPUT_IMAGE.jpeg OUTPUT_IMAGE[NAME].jpeg WIDTH HEIGHT (Total of 4ARGS)  |  TESTS ARE RUNNING: python3 rgb_yuv.py --resize_image input_image.jpeg ex_2_output_image.jpeg 960 1440
 
 #EXERCISE 3: READ THE BYTES OF A JPEG FILE IN THE SERPENTINE WAY:
 #NOTICE THAT THE FUNCTION WILL PRINT THE FIRST 30 BYTES OF THE JPEG SERIAL CONVERSION OF THE CONVERTED DCT SPECTRUM TO PLACE ALL THE HIGH FREQUENCY COMPONENTS TOGETHER TO LATER COMPRESS USING A RUN-LENGTH ENCODING.
-#python3 rgb_yuv.py --serpentine INPUT_IMAGE.jpeg WIDTH HEIGHT   |   TESTS ARE RUNNING: python3 rgb_yuv.py --serpentine input_lena_512.jpeg 512 512
+#python3 rgb_yuv.py --serpentine INPUT_IMAGE.jpeg WIDTH HEIGHT   |   TESTS ARE RUNNING: python3 rgb_yuv.py --serpentine input_image.jpeg 1920 2879
 
 #EXERCISE 4: TRANSFORM THE PREVIOUS IMAGE INTO B/W WITH THE HARDEST COMPRESSION POSSIBLE:
 #In order to perform a hard compression to the image we will use a constant rate factor of 51
-#python3 rgb_yuv.py --transform_image input_lena_512.jpeg ex4_output_lena.jpeg 51
+#python3 rgb_yuv.py --transform_image input_image.jpeg ex4_output_image.jpeg 51
 
 #For this exercise the crf = 51 compression level has been used when encoding videos using the H.264/H.265 codecs.
 #This high CRF indicates stronger compression and lower quality, while a lower CRF value would have preserved more quality but would result in larger file size.
 #If we take a look at the output image, this level of compression results in a noticeable loss of image quality, and much smaller file size compared to the original.
 
 #EXERCISE 5: APPLY A RUN-LENGTH ENCODING FROM A SERIES OF BYTES GIVEN:
-#python3 rgb_yuv.py --run_length_encode INPUT_IMAGE.jpeg WIDTH HEIGHT   |   TESTS ARE RUNNING: python3 rgb_yuv.py --run_length_encode input_lena_512.jpeg 512 512
-#I HAVE BEEN ALSO APPLYING RUN-LENGTH ENCODING TO THE EX4 OUTPUT B/W IMAGE: python3 rgb_yuv.py --run_length_encode ex4_output_lena.jpeg 512 512
+#python3 rgb_yuv.py --run_length_encode INPUT_IMAGE.jpeg WIDTH HEIGHT   |   TESTS ARE RUNNING: python3 rgb_yuv.py --run_length_encode input_image.jpeg 1920 2879
+#I HAVE BEEN ALSO APPLYING RUN-LENGTH ENCODING TO THE EX4 OUTPUT B/W IMAGE: python3 rgb_yuv.py --run_length_encode ex4_output_image.jpeg 1920 2879
 
 #EXERCISE 6: CLASS TO CONVERT AND DECODE AN INPUT USING THE DCT
 #python3 rgb_yuv.py --dct_conversion
